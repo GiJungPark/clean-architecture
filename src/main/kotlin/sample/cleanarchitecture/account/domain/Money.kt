@@ -10,12 +10,12 @@ class Money private constructor(
     }
 
     fun isPositive(): Boolean {
-        return this.amount.compareTo(BigInteger.ZERO) > 0
+        return this.amount > BigInteger.ZERO
     }
 
     companion object {
 
-        val ZERO: Money = Money.of(BigInteger.ZERO)
+        val ZERO: Money = of(BigInteger.ZERO)
 
         fun of(amount: BigInteger): Money {
             return Money(amount)
