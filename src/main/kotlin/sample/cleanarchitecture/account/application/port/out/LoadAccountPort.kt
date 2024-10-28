@@ -1,7 +1,7 @@
 package sample.cleanarchitecture.account.application.port.out
 
 import sample.cleanarchitecture.account.domain.Account
-import sample.cleanarchitecture.account.domain.Account.Companion.AccountId
+import sample.cleanarchitecture.account.domain.AccountId
 import java.time.LocalDateTime
 
 

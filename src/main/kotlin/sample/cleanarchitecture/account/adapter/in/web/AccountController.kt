@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RestController
 import sample.cleanarchitecture.account.application.port.`in`.SendMoneyCommand
 import sample.cleanarchitecture.account.application.port.`in`.SendMoneyUseCase
-import sample.cleanarchitecture.account.domain.Account.Companion.AccountId
+import sample.cleanarchitecture.account.domain.AccountId
 import sample.cleanarchitecture.account.domain.Money
 
 @RestController

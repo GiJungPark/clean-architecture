@@ -53,8 +53,6 @@ class Account(
         fun withId(accountId: AccountId, baselineMoney: Money, activityWindow: ActivityWindow): Account {
             return Account(accountId, baselineMoney, activityWindow)
         }
-
-        class AccountId(val value: Long)
     }
 
     private fun mayWithdraw(money: Money): Boolean {

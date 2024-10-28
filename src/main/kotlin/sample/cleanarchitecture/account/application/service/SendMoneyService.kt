@@ -7,7 +7,7 @@ import sample.cleanarchitecture.account.application.port.`in`.SendMoneyUseCase
 import sample.cleanarchitecture.account.application.port.out.AccountLock
 import sample.cleanarchitecture.account.application.port.out.LoadAccountPort
 import sample.cleanarchitecture.account.application.port.out.UpdateAccountStatePort
-import sample.cleanarchitecture.account.domain.Account.Companion.AccountId
+import sample.cleanarchitecture.account.domain.AccountId
 import java.time.LocalDateTime
 
 

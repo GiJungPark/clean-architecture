@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component
 import sample.cleanarchitecture.account.application.port.out.LoadAccountPort
 import sample.cleanarchitecture.account.application.port.out.UpdateAccountStatePort
 import sample.cleanarchitecture.account.domain.Account
-import sample.cleanarchitecture.account.domain.Account.Companion.AccountId
+import sample.cleanarchitecture.account.domain.AccountId
 import java.time.LocalDateTime
 
 @Component

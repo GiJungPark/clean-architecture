@@ -2,7 +2,7 @@ package sample.cleanarchitecture.account.application.service
 
 import org.springframework.stereotype.Component
 import sample.cleanarchitecture.account.application.port.out.AccountLock
-import sample.cleanarchitecture.account.domain.Account.Companion.AccountId
+import sample.cleanarchitecture.account.domain.AccountId
 
 @Component
 class NoOpAccountLock : AccountLock {

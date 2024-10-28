@@ -1,19 +1,17 @@
 package sample.cleanarchitecture.account.domain
 
-import sample.cleanarchitecture.account.domain.Account.Companion.AccountId
-
 class ActivityWindow(
-    val activities: MutableList<Activity>
+    val activities: MutableList<Activity>,
 ) {
     fun calculateBalance(accountId: AccountId): Money {
         val depositBalance: Money = activities.stream()
-            .filter { a -> a.targetAccountId == accountId }
-            .map(Activity::money)
+            .filter { it.targetAccountId == accountId }
+            .map { it.money }
             .reduce(Money.ZERO, Money::add)
 
         val withdrawalBalance: Money = activities.stream()
-            .filter { a -> a.sourceAccountId == accountId }
-            .map(Activity::money)
+            .filter { it.sourceAccountId == accountId }
+            .map { it.money }
             .reduce(Money.ZERO, Money::add)
 
         return Money.add(depositBalance, withdrawalBalance.negate())

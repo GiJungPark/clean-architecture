@@ -1,12 +1,8 @@
 package sample.cleanarchitecture.account.adapter.out.persistence
 
 import org.springframework.stereotype.Component
-import sample.cleanarchitecture.account.domain.Account
-import sample.cleanarchitecture.account.domain.Account.Companion.AccountId
-import sample.cleanarchitecture.account.domain.Activity
+import sample.cleanarchitecture.account.domain.*
 import sample.cleanarchitecture.account.domain.Activity.Companion.ActivityId
-import sample.cleanarchitecture.account.domain.ActivityWindow
-import sample.cleanarchitecture.account.domain.Money
 
 
 @Component
