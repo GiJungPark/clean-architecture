@@ -15,7 +15,7 @@ class Account(
         )
     }
 
-    // 출금
+    // 인출
     fun withdraw(money: Money, targetAccountId: AccountId): Boolean {
         if (!mayWithdraw(money)) {
             return false

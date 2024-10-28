@@ -3,7 +3,6 @@ package sample.cleanarchitecture.account.domain
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
-import sample.cleanarchitecture.account.domain.Activity.Companion.ActivityId
 import java.time.LocalDateTime
 
 class ActivityWindowTest {

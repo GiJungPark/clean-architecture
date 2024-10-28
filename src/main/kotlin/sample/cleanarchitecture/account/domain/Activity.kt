@@ -9,8 +9,4 @@ class Activity(
     val targetAccountId: AccountId,
     val timestamp: LocalDateTime,
     val money: Money,
-) {
-    companion object {
-        class ActivityId(val value: Long)
-    }
-}
+)
