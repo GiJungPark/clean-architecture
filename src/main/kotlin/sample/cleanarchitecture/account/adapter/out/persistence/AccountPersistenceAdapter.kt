@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component
 import sample.cleanarchitecture.account.application.port.out.LoadAccountPort
 import sample.cleanarchitecture.account.application.port.out.UpdateAccountStatePort
 import sample.cleanarchitecture.account.domain.Account
+import sample.cleanarchitecture.account.domain.Account.Companion.AccountId
 import java.time.LocalDateTime
 
 @Component
@@ -14,7 +15,7 @@ class AccountPersistenceAdapter(
     private val accountMapper: AccountMapper,
 ) : LoadAccountPort, UpdateAccountStatePort {
 
-    override fun loadAccount(accountId: Account.Companion.AccountId, baselineDate: LocalDateTime): Account {
+    override fun loadAccount(accountId: AccountId, baselineDate: LocalDateTime): Account {
         val account = accountRepository.findById(accountId.value).orElseThrow { EntityNotFoundException("Account not found: $accountId") }
 
         val activities = activityRepository.findByOwnerSince(accountId.value, baselineDate)
