@@ -22,11 +22,11 @@ class Account(
         }
 
         val withdrawal = Activity(
-            this.id,
-            this.id,
-            targetAccountId,
-            LocalDateTime.now(),
-            money
+            ownerAccountId = this.id,
+            sourceAccountId =  this.id,
+            targetAccountId = targetAccountId,
+            timestamp = LocalDateTime.now(),
+            money = money
         )
 
         this.activityWindow.addActivity(withdrawal)
@@ -37,11 +37,11 @@ class Account(
     // 예금
     fun deposit(money: Money, sourceAccountId: AccountId): Boolean {
         val deposit = Activity(
-            this.id,
-            sourceAccountId,
-            this.id,
-            LocalDateTime.now(),
-            money
+            ownerAccountId = this.id,
+            sourceAccountId = sourceAccountId,
+            targetAccountId = this.id,
+            timestamp = LocalDateTime.now(),
+            money = money
         )
 
         this.activityWindow.addActivity(deposit)
@@ -50,6 +50,10 @@ class Account(
     }
 
     companion object {
+        fun withId(accountId: AccountId, baselineMoney: Money, activityWindow: ActivityWindow): Account {
+            return Account(accountId, baselineMoney, activityWindow)
+        }
+
         class AccountId(val value: Long)
     }
 

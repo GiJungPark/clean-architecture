@@ -24,5 +24,9 @@ class Money private constructor(
         fun add(a: Money, b: Money): Money {
             return Money(a.amount.add(b.amount))
         }
+
+        fun subtract(a: Money, b: Money): Money {
+            return Money(a.amount.subtract(b.amount))
+        }
     }
 }

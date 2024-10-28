@@ -4,6 +4,7 @@ import sample.cleanarchitecture.account.domain.Account.Companion.AccountId
 import java.time.LocalDateTime
 
 class Activity(
+    val id: ActivityId? = null,
     val ownerAccountId: AccountId,
     val sourceAccountId: AccountId,
     val targetAccountId: AccountId,
