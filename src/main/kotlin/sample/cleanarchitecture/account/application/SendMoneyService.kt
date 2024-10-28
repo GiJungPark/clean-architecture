@@ -1,11 +1,13 @@
 package sample.cleanarchitecture.account.application
 
+import org.springframework.stereotype.Service
 import sample.cleanarchitecture.account.application.port.`in`.SendMoneyCommand
 import sample.cleanarchitecture.account.application.port.`in`.SendMoneyUseCase
 import sample.cleanarchitecture.account.application.port.out.AccountLock
 import sample.cleanarchitecture.account.application.port.out.LoadAccountPort
 import sample.cleanarchitecture.account.application.port.out.UpdateAccountStatePort
 
+@Service
 class SendMoneyService (
     val loadAccountPort: LoadAccountPort,
     val accountLock: AccountLock,

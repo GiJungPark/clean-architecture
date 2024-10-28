@@ -5,7 +5,7 @@ import sample.cleanarchitecture.account.domain.Account.Companion.AccountId
 import sample.cleanarchitecture.account.domain.Money
 import sample.cleanarchitecture.common.SelfValidating
 
-class SendMoneyCommand private constructor(
+class SendMoneyCommand constructor(
     @field:NotNull
     val sourceAccountId: AccountId,
 
