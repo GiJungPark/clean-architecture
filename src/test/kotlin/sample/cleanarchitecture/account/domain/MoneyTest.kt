@@ -61,9 +61,9 @@ class MoneyTest {
     }
 
     @Test
-    fun `Money가 1이상이면, isPositive()는 true를 반환한다`() {
+    fun `Money가 0 이상이면, isPositive()는 true를 반환한다`() {
         // given
-        val value = 1L
+        val value = 0L
         val money = Money.of(value.toBigInteger())
 
         // when
@@ -74,9 +74,9 @@ class MoneyTest {
     }
 
     @Test
-    fun `Money가 1미만이면, isPositive()는 false를 반환한다`() {
+    fun `Money가 음수이면, isPositive()는 false를 반환한다`() {
         // given
-        val value = 0L
+        val value = -1L
         val money = Money.of(value.toBigInteger())
 
         // when

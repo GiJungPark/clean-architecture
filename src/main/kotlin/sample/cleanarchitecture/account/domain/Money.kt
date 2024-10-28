@@ -10,7 +10,7 @@ class Money private constructor(
     }
 
     fun isPositive(): Boolean {
-        return this.amount > BigInteger.ZERO
+        return this.amount >= BigInteger.ZERO
     }
 
     companion object {
