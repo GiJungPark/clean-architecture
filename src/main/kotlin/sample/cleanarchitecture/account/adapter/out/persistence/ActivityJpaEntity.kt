@@ -8,7 +8,7 @@ import java.time.LocalDateTime
 class ActivityJpaEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long = 0L,
+    var id: Long? = 0L,
 
     @Column(nullable = false)
     var timestamp: LocalDateTime = LocalDateTime.now(),

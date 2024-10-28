@@ -30,7 +30,7 @@ class AccountMapper {
         for (activity in activities) {
             mappedActivities.add(
                 Activity(
-                    ActivityId(activity.id),
+                    activity.id?.let { ActivityId(it) },
                     AccountId(activity.ownerAccountId),
                     AccountId(activity.sourceAccountId),
                     AccountId(activity.targetAccountId),
@@ -45,7 +45,7 @@ class AccountMapper {
 
     fun mapToJpaEntity(activity: Activity): ActivityJpaEntity {
         return ActivityJpaEntity(
-            (if (activity.id == null) null else activity.id.value)!!,
+            (if (activity.id == null) null else activity.id.value),
             activity.timestamp,
             activity.ownerAccountId.value,
             activity.sourceAccountId.value,
