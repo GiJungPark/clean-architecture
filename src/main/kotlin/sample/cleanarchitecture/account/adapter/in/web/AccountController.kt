@@ -1,4 +1,4 @@
-package sample.cleanarchitecture.account.adapter.web
+package sample.cleanarchitecture.account.adapter.`in`.web
 
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping

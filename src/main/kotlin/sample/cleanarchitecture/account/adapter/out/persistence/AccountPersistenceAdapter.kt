@@ -1,4 +1,4 @@
-package sample.cleanarchitecture.account.adapter.persistence
+package sample.cleanarchitecture.account.adapter.out.persistence
 
 import jakarta.persistence.EntityNotFoundException
 import org.springframework.stereotype.Component

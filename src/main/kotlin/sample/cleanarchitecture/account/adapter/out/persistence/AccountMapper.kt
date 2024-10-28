@@ -1,4 +1,4 @@
-package sample.cleanarchitecture.account.adapter.persistence
+package sample.cleanarchitecture.account.adapter.out.persistence
 
 import org.springframework.stereotype.Component
 import sample.cleanarchitecture.account.domain.Account
