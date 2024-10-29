@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository
 import java.time.LocalDateTime
 
 @Repository
-interface ActivityRepository : JpaRepository<ActivityJpaEntity, Long> {
+internal interface ActivityRepository : JpaRepository<ActivityJpaEntity, Long> {
     @Query(
         "select a from ActivityJpaEntity a " +
                 "where a.ownerAccountId = :ownerAccountId " +

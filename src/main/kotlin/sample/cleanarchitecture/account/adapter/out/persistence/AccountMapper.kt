@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component
 import sample.cleanarchitecture.account.domain.*
 
 @Component
-class AccountMapper {
+internal class AccountMapper {
     fun mapToDomainEntity(
         account: AccountJpaEntity,
         activities: List<ActivityJpaEntity>,
