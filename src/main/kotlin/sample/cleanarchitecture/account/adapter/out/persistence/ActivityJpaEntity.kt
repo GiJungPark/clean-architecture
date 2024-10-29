@@ -5,7 +5,7 @@ import java.time.LocalDateTime
 
 @Table(name = "activity")
 @Entity
-class ActivityJpaEntity(
+internal class ActivityJpaEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = 0L,
