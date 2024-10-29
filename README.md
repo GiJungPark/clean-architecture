@@ -31,7 +31,7 @@
   - 도메인 계층과 영속성 계층이 데이터를 주고 받을 때, 두 엔티티를 서로 변환해야 한다.
   - 하지만 이는 `결합이 제거된 상태`이기 때문에 `바람직한 일`이다.
 ### 헥사고날 아키텍처
-![img.png](https://private-user-images.githubusercontent.com/101462387/381067213-71862d79-e973-46e4-8628-64a96e9df7ee.jpeg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzAxOTUyMzYsIm5iZiI6MTczMDE5NDkzNiwicGF0aCI6Ii8xMDE0NjIzODcvMzgxMDY3MjEzLTcxODYyZDc5LWU5NzMtNDZlNC04NjI4LTY0YTk2ZTlkZjdlZS5qcGVnP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MTAyOSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDEwMjlUMDk0MjE2WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MzA4NzZjOGY0ZjIxZGFkNjAyNGFjNGMxYjE1YjFmZjYyMjFjNWQyMDMwMDQ2YmZmNDNlZTk1MzNhZDMzZDdlZCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.A1AqPTHmfVTHfkqLcXlXy4kxUzRVn9tcER91wlWnvdI)
+![hexagonal-architecture](https://github.com/user-attachments/assets/89eba218-406d-4a55-b38d-8ad3c354609e)
 - `에플리케이션 코어`가 각 `어댑터`와 상호작용하기 위해 특정 `포트`를 제공한다.
 #### 어댑터
 - 어댑터는 크게 두 가지의 종류가 있다.
