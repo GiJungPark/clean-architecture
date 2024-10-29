@@ -1,6 +1,5 @@
 package sample.cleanarchitecture.account.application.service
 
-import jakarta.transaction.Transactional
 import org.springframework.stereotype.Service
 import sample.cleanarchitecture.account.application.port.`in`.SendMoneyCommand
 import sample.cleanarchitecture.account.application.port.`in`.SendMoneyUseCase
@@ -12,12 +11,11 @@ import java.time.LocalDateTime
 
 
 @Service
-class SendMoneyService (
+internal class SendMoneyService (
     val loadAccountPort: LoadAccountPort,
     val accountLock: AccountLock,
     val updateAccountStatePort: UpdateAccountStatePort,
 ): SendMoneyUseCase {
-    @Transactional
     override fun sendMoney(command: SendMoneyCommand): Boolean {
         val baselineDate = LocalDateTime.now().minusDays(10)
 

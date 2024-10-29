@@ -6,7 +6,7 @@ import sample.cleanarchitecture.account.domain.AccountId
 import sample.cleanarchitecture.account.domain.Money
 import java.time.LocalDateTime
 
-class GetAccountBalanceService(
+internal class GetAccountBalanceService(
     val loadAccountPort: LoadAccountPort,
 ) : GetAccountBalanceQuery {
     override fun getAccountBalance(accountId: AccountId): Money {
